@@ -20,8 +20,18 @@ h2 {
     font-size: 4em;
 }
 
+.page {
+    margin-top: 3em;
+    display: none;
+}
+
 .starting-title {
-    margin-top: 15em;
+    margin-top: 12em;
+}
+
+.button-container {
+    width: 100%;
+    text-align: right;
 }
 
 .creepy-button {
@@ -30,6 +40,16 @@ h2 {
     border: 1px grey solid;
     padding: .5em 1em .5em 1em;
     border-radius: 1em;
+}
+
+#warning {
+    color: var(--red);
+    text-align: center;
+    margin-top: 1em;
+    border: 1px var(--red) solid;
+    padding: .5em;
+    border-radius: 1em;
+    display: none;
 }
 
 .creepy-button:hover {
