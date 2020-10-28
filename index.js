@@ -6,7 +6,13 @@
     }
 
     function InitNavButtons() {
+        $(".start-button").click((e) => {
+            let $currPage = $(e.target).parents(".page");
+            $currPage.fadeOut(() => {$("#game").fadeIn()});
+        });
+        
         $(".nav-button").click((e) => {
+            $("#warning").css("display", "none");
             let isNext = $(e.target).hasClass("next-page-button");
             let $currPage = $(e.target).parents(".page");
             let index = parseInt($currPage.attr("page-index"));
@@ -16,8 +22,6 @@
                 if(!validated) {
                     $("#warning").fadeIn();
                     return;
-                } else {
-                    $("#warning").css("display", "none");
                 }
             }
 
@@ -28,7 +32,12 @@
     }
 
     function ValidatePage(pageIndex) {
-
+        if(pageIndex === 1) 
+            return ValidatePage1();
         return true;
+    }
+
+    function ValidatePage1() {
+        return $("#input-one").val() === "rickroll";
     }
 })();

@@ -17,16 +17,35 @@
                 <h2>Triton Games</h2>
                 <h1>Murder Mystery</h1>
             </div>
-            <button class="creepy-button nav-button next-page-button">Start</button>
+            <button class="creepy-button start-button">Start</button>
         </div>
-        <div class="page" page-index="1">
-            <h2>Murder Mystery</h2>
-            <div class="button-container">
-                <button class="creepy-button nav-button prev-page-button">Previous</button>
-                <button class="creepy-button nav-button next-page-button">Next</button>
+        <div id="game" style="display: none;">
+            <h2 id="mm-title">Murder Mystery</h2>
+            <div id="warning">Oops you got something wrong!</div>
+            <div class="page" page-index="1" style="display: block">
+                <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+                <div class="input-container">
+                    <input type="text" id="input-one" name="input-one">
+                </div>
+                <div class="button-container">
+                    <button class="creepy-button nav-button next-page-button">Next</button>
+                </div>
+            </div>
+            <div class="page" page-index="2">
+                <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+                <div class="input-container">
+                    <input type="text" id="input-one" name="input-two">
+                </div>
+                <div class="button-container">
+                    <button class="creepy-button nav-button prev-page-button">Previous</button>
+                    <button class="creepy-button nav-button next-page-button">Next</button>
+                </div>
             </div>
         </div>
-        <div id="warning">Oops you got something wrong!</div>
     </div>
     <script src="./index.js"></script>
 </body>
