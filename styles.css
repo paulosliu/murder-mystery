@@ -37,22 +37,22 @@ h2 {
 .creepy-button {
     background: none;
     color: white;
-    border: 1px grey solid;
+    border: 1.5px grey solid;
     padding: .5em 1em .5em 1em;
     border-radius: 1em;
+}
+
+.creepy-button:hover {
+    color: var(--red);
+    border: var(--red) 1.5px solid;
 }
 
 #warning {
     color: var(--red);
     text-align: center;
-    margin-top: 1em;
-    border: 1px var(--red) solid;
+    margin-top: 1.5em;
+    border: 2px var(--red) solid;
     padding: .5em;
     border-radius: 1em;
     display: none;
-}
-
-.creepy-button:hover {
-    color: var(--red);
-    border: var(--red) 1px solid;
 }
