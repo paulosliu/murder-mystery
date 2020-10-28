@@ -1,0 +1,38 @@
+:root {
+    --red: #8c251d;
+}
+
+body {
+    background: black;
+    color: white;
+}
+
+h1, h2 {
+    font-family: 'Staatliches', cursive;
+    line-height: 0.8em;
+}
+
+h1 {
+    font-size: 8em;
+}
+
+h2 {
+    font-size: 4em;
+}
+
+.starting-title {
+    margin-top: 15em;
+}
+
+.creepy-button {
+    background: none;
+    color: white;
+    border: 1px grey solid;
+    padding: .5em 1em .5em 1em;
+    border-radius: 1em;
+}
+
+.creepy-button:hover {
+    color: var(--red);
+    border: var(--red) 1px solid;
+}
