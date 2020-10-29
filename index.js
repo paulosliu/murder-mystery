@@ -32,12 +32,32 @@
     }
 
     function ValidatePage(pageIndex) {
-        if(pageIndex === 1) 
-            return ValidatePage1();
-        return true;
+        switch (pageIndex)
+        {
+            case 1:
+                return ValidatePage1();
+            case 7:
+                return ValidatePage7();
+            default:
+                return true;        
+        }
     }
 
     function ValidatePage1() {
         return $("#input-one").val() === "rickroll";
+    }
+
+    /**
+     * Faculty Building Code
+     */
+    function ValidatePage7()
+    {
+        if ($("#input-seven").val() === "61343")
+        {
+            document.getElementById('facultyBG').pause();
+            return true;
+        }
+   
+        return false;
     }
 })();
