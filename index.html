@@ -39,13 +39,13 @@
                     <input type="text">
                 </div>
                 <div class="button-container">
-                    <button class="creepy-button nav-button prev-page-button">Previous</button>
+                    <button class="creepy-button nav-button prev-page-button" onclick="document.getElementById('chem').pause()">Previous</button>
                     <button class="creepy-button nav-button next-page-button">Next</button>
                 </div>
             </div>
             <div class="page" page-index="3">
                 <p>The University of California, San Diego (UC San Diego or, colloquially, UCSD) is a public
-                    <span class="nav-button next-page-button">research</span>
+                    <span class="nav-button next-page-button" onclick="document.getElementById('phoneCall').play()">research</span>
                     university in San Diego, California. Established in 1960 near the pre-existing Scripps Institution
                     of Oceanography, UC San Diego is one of the ten campuses of the University of California, and offers
                     over 200 undergraduate and graduate degree programs, enrolling approximately 30,800 undergraduate
@@ -63,35 +63,36 @@
                 </div>
             </div>
             <div class="page" page-index="4">
-                <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowfullscreen></iframe>
+                <audio id="phoneCall" loop>
+                    <source src="assets/Phone Call.mp3" type="audio/mp3">
+                </audio>
                 <div class="input-container">
+                    <p>Input password after watching a video, not after hearing the audio</p>
                     <input type="text">
                 </div>
                 <div class="button-container">
-                    <button class="creepy-button nav-button prev-page-button">Previous</button>
+                    <button class="creepy-button nav-button prev-page-button" onclick="document.getElementById('phoneCall').pause()">Previous</button>
                     <button class="creepy-button nav-button next-page-button">Next</button>
                 </div>
             </div>
             <div class="page" page-index="5">
-                <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowfullscreen></iframe>
+                <video id="vlog" src="assets/Prof Vlog.mov" controls></video>
+                <img src="assets/Sudoku.JPG" alt="Sudoku">
                 <div class="input-container">
+                    <p>What is the name of the building?</p>
                     <input type="text">
                 </div>
-                <audio id="facultyBG">
-                    <source src="assets/Faculty Background Music.mp3" type="audio/mp3">
-                </audio>
                 <div class="button-container">
-                    <button class="creepy-button nav-button prev-page-button">Previous</button>
+                    <button class="creepy-button nav-button prev-page-button" onclick="document.getElementById('vlog').pause()">Previous</button>
                     <button class="creepy-button nav-button next-page-button"
                         onclick="document.getElementById('facultyBG').play()">Next</button>
                 </div>
             </div>
             <div class="page" page-index="6">
                 <img src="assets/Faculty Background Pic.jpg" alt="Faculty Building">
+                <audio id="facultyBG" loop>
+                    <source src="assets/Faculty Background Music.mp3" type="audio/mp3">
+                </audio>
                 <div class="input-container">
                     <input type="text">
                 </div>
@@ -100,6 +101,9 @@
                         onclick="document.getElementById('facultyBG').pause()">Previous</button>
                     <button class="creepy-button nav-button next-page-button">Next</button>
                 </div>
+            </div>
+            <div class="page" page-index="7">
+                <img src="assets/Faculty Background Pic.jpg" alt="Faculty Building">
             </div>
         </div>
     </div>
