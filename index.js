@@ -48,7 +48,7 @@
 
     const ANS = ["ProSS", "skull", undefined, "Project Super Human", "Faculty Club", "61343"];
     function ValidatePage(pageIndex) {
-        let value = ANS[pageIndex - 1];
+        let value = ANS[pageIndex - 1] ;
         if(typeof value === "undefined")
             return true;
 
@@ -57,9 +57,24 @@
     }
 
     function OnSuccess(pageIndex) {
-        if(pageIndex === 7)
-            document.getElementById('facultyBG').pause();
-        else if (pageIndex === 1)
-            document.getElementById('chem').play();
+        switch (pageIndex)
+        {
+            case 1:
+                document.getElementById('chem').play();
+                return;
+            case 2:
+                document.getElementById('chem').pause();
+                return;
+            case 4:
+                document.getElementById('phoneCall').pause();  
+                document.getElementById('vlog').play();
+                return;
+            case 5:
+                document.getElementById('vlog').pause();
+                return;    
+            case 6:
+                document.getElementById('facultyBG').pause();
+                return;        
+        }
     }
 })();
