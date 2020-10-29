@@ -59,5 +59,7 @@
     function OnSuccess(pageIndex) {
         if(pageIndex === 7)
             document.getElementById('facultyBG').pause();
+        else if (pageIndex === 1)
+            document.getElementById('chem').play();
     }
 })();
