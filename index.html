@@ -17,15 +17,13 @@
                 <h2>Triton Games</h2>
                 <h1>Murder Mystery</h1>
             </div>
-            <button class="creepy-button start-button">Start</button>
+            <button class="creepy-button start-button" onclick="document.getElementById('intro').play()">Start</button>
         </div>
         <div id="game" style="display: none;">
             <h2 id="mm-title">Murder Mystery</h2>
             <div id="warning">Oops you got something wrong!</div>
             <div class="page" page-index="1" style="display: block">
-                <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowfullscreen></iframe>
+                <video id="intro" src="assets/Halloween Murder Mystery 2020 Intro.mov" controls></video>
                 <div class="input-container">
                     <input type="text">
                 </div>
@@ -34,16 +32,24 @@
                 </div>
             </div>
             <div class="page" page-index="2">
-                <video id="chem" src="assets/chem.mov" controls></video>
+                <video id="jon" src="assets/Murder Mystery 2020 Jon Low.mov" controls></video>
                 <div class="input-container">
                     <input type="text">
                 </div>
+                <div class="button-container">
+                    <button class="creepy-button nav-button prev-page-button" onclick="document.getElementById('jon').pause()">Previous</button>
+                    <button class="creepy-button nav-button next-page-button">Next</button>
+                </div>
+            </div>
+            <div class="page" page-index="3">
+                <video id="chem" src="assets/chem.mov" controls></video>
+                <p class="center">Proceed when you think you have the answer</p>
                 <div class="button-container">
                     <button class="creepy-button nav-button prev-page-button" onclick="document.getElementById('chem').pause()">Previous</button>
                     <button class="creepy-button nav-button next-page-button">Next</button>
                 </div>
             </div>
-            <div class="page" page-index="3">
+            <div class="page" page-index="4">
                 <p>The University of California, San Diego (UC San Diego or, colloquially, UCSD) is a public
                     <span class="nav-button next-page-button" onclick="document.getElementById('phoneCall').play()">research</span>
                     university in San Diego, California. Established in 1960 near the pre-existing Scripps Institution
@@ -54,15 +60,11 @@
                     UCs. Below we have a recording of a lecture provided by one of the chemistry professors from UC San
                     Diego, a prestigious PHD graduate from the class of 1974, Professor Adams Morris has been teaching
                     at UC San Diego for over 40 years.</p>
-                <div class="input-container">
-                    <input type="text">
-                </div>
                 <div class="button-container">
                     <button class="creepy-button nav-button prev-page-button">Previous</button>
-                    <button class="creepy-button fake-nav-button">Next</button>
                 </div>
             </div>
-            <div class="page" page-index="4">
+            <div class="page" page-index="5">
                 <audio id="phoneCall" loop>
                     <source src="assets/Phone Call.mp3" type="audio/mp3">
                 </audio>
@@ -75,21 +77,30 @@
                     <button class="creepy-button nav-button next-page-button">Next</button>
                 </div>
             </div>
-            <div class="page" page-index="5">
+            <div class="page" page-index="6">
                 <video id="vlog" src="assets/Prof Vlog.mov" controls></video>
-                <img src="assets/Sudoku.JPG" alt="Sudoku">
+                <div class="button-container">
+                    <button class="creepy-button nav-button prev-page-button" onclick="document.getElementById('vlog').pause()">Previous</button>
+                    <button class="creepy-button nav-button next-page-button" onclick="document.getElementById('vlog').pause()">Next</button>
+                </div>
+            </div>
+            <div class="page" page-index="7">
+                <div class="center">
+                    <img src="assets/Sudoku.JPG" alt="Sudoku">
+                </div>
                 <div class="input-container">
                     <p>What is the name of the building?</p>
                     <input type="text">
                 </div>
                 <div class="button-container">
-                    <button class="creepy-button nav-button prev-page-button" onclick="document.getElementById('vlog').pause()">Previous</button>
-                    <button class="creepy-button nav-button next-page-button"
-                        onclick="document.getElementById('facultyBG').play()">Next</button>
+                    <button class="creepy-button nav-button prev-page-button">Previous</button>
+                    <button class="creepy-button nav-button next-page-button">Next</button>
                 </div>
             </div>
-            <div class="page" page-index="6">
-                <img src="assets/Faculty Background Pic.jpg" alt="Faculty Building">
+            <div class="page" page-index="8">
+                <div class="center">
+                    <img src="assets/Faculty Background Pic.jpg" alt="Faculty Building">
+                </div>
                 <audio id="facultyBG" loop>
                     <source src="assets/Faculty Background Music.mp3" type="audio/mp3">
                 </audio>
@@ -102,7 +113,7 @@
                     <button class="creepy-button nav-button next-page-button">Next</button>
                 </div>
             </div>
-            <div class="page" page-index="7">
+            <div class="page" page-index="9">
                 <img src="assets/Faculty Background Pic.jpg" alt="Faculty Building">
             </div>
         </div>
