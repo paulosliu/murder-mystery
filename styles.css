@@ -60,6 +60,10 @@ h2 {
     text-align: right;
 }
 
+.center {
+    text-align: center;
+}
+
 .creepy-button {
     background: none;
     color: white;
