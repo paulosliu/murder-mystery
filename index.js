@@ -79,6 +79,7 @@
                 return;  
             case 8:
                 document.getElementById('facultyBG').pause();
+                document.getElementById('ending').play();
                 return;        
         }
     }
