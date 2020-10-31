@@ -61,26 +61,35 @@
         {
             case 1:
                 document.getElementById('intro').pause();
-                document.getElementById('jon').play();
+                PlayAfterShortTimeout('jon');
                 return;
             case 2:
                 document.getElementById('jon').pause();
-                document.getElementById('chem').play();
+                PlayAfterShortTimeout('chem');
                 return;
             case 3:
                 document.getElementById('chem').pause();
                 return;    
             case 4:
-                document.getElementById('phoneCall').pause();  
-                document.getElementById('vlog').play();
+                document.getElementById('phoneCall').pause();
+                PlayAfterShortTimeout('vlog');
+                return;
+            case 5:
+                setTimeout(() => {$("p.hint").fadeIn();}, 120000);
                 return;
             case 6:
                 document.getElementById('facultyBG').play();
                 return;  
             case 7:
                 document.getElementById('facultyBG').pause();
-                document.getElementById('ending').play();
+                PlayAfterShortTimeout('ending');
                 return;        
         }
     }
 })();
+
+function PlayAfterShortTimeout(id) {
+    setTimeout(() => {
+        document.getElementById(id).play();
+    }, 600);
+}

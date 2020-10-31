@@ -102,6 +102,16 @@ h2 {
     border: var(--red) 1.5px solid;
 }
 
+p.hint {
+    display: none;
+    color: var(--red);
+}
+
+p.hint > a {
+    color: var(--red);
+    text-decoration: underline;
+}
+
 #warning {
     color: var(--red);
     text-align: center;
