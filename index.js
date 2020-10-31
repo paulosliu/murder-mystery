@@ -3,7 +3,8 @@
 
     function OnLoad() {
         InitNavButtons();
-        // ShowPage(6);
+        InitPhone();
+        // ShowPage(4);
     }
 
     // for debugging
@@ -25,7 +26,7 @@
 
         $(".nav-button").click((e) => {
             $("#warning").css("display", "none");
-            let isNext = $(e.target).hasClass("next-page-button");
+            let isNext = $(e.target).hasClass("next-page-button") || $(e.target).parent().hasClass("next-page-button");
             let $currPage = $(e.target).parents(".page");
             let index = parseInt($currPage.attr("page-index"));
 
@@ -101,6 +102,27 @@
         setTimeout(() => {
             $hint.fadeIn();
         }, delayInSeconds * 1000);
+    }
+
+    function InitPhone() {
+        let $phone = $("#phone-pad");
+        let $display = $phone.find(".display");
+        
+        $phone.find(".numpad div").on("click", e => {
+            let currVal = $display.val();
+            let $target = $(e.target);
+
+            if($target.hasClass("backspace") || $target.hasClass("fa-backspace")) {
+                $display.val(currVal.substring(0, currVal.length - 1));
+                return;
+            }
+
+            if(currVal.length == 10)
+                return;
+
+            let newDigit = $target.text();
+            $display.val(currVal + newDigit);
+        });
     }
 })();
 

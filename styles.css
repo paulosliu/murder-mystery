@@ -121,3 +121,42 @@ p.hint > a {
     border-radius: 1em;
     display: none;
 }
+
+#phone-pad {
+    font-size: 2em;
+    border-color: grey solid 2px;
+    margin: 2em;
+    margin-top: 1em;
+}
+
+#phone-pad .display {
+    font-family: 'Staatliches', cursive;
+    letter-spacing: 3px;
+    text-align: right;
+    border: white 2px solid;
+    padding: .3em;
+    padding-right: 1em;
+    font-size: 1.5em;
+    width: 100%;
+    margin-bottom: 1em;
+    background: none;
+    color: white;
+}
+
+#phone-pad .numpad {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+#phone-pad .numpad div {
+    margin: .1em;
+    text-align: center;
+    cursor: pointer;
+    border: white 2px solid;
+    padding: .5em;
+}
+
+#phone-pad .numpad div:hover {
+    border: var(--red) 2px solid;
+    color: var(--red);
+}
