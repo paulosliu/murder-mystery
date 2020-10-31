@@ -3,7 +3,7 @@
 
     function OnLoad() {
         InitNavButtons();
-        ShowPage(6);
+        // ShowPage(6);
     }
 
     // for debugging
