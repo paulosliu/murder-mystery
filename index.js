@@ -3,14 +3,18 @@
 
     function OnLoad() {
         InitNavButtons();
-        // ShowPage(3);
+        ShowPage(6);
     }
 
     // for debugging
     function ShowPage(index) {
         $(".page").css("display", "none");
-        $(`.page[page-index='${index}']`).css("display", "block");
+        $GetPage(index).css("display", "block");
         $("#game").fadeIn();
+    }
+
+    function $GetPage(pageIndex) {
+        return $(`.page[page-index='${pageIndex}']`);
     }
 
     function InitNavButtons() {
@@ -36,7 +40,7 @@
             }
 
             let nextIndex = isNext ? index + 1 : index - 1;
-            let $nextPage = $(`.page[page-index='${nextIndex}']`);
+            let $nextPage = $GetPage(nextIndex);
             $currPage.fadeOut(() => { $nextPage.fadeIn() });
         });
 
@@ -52,7 +56,7 @@
         if(typeof value === "undefined")
             return true;
 
-        let $input = $(`.page[page-index='${pageIndex}'] input`);
+        let $input = $GetPage(pageIndex).find('input');
         return $input.val().toUpperCase() === value.toUpperCase();
     }
 
@@ -75,16 +79,24 @@
                 PlayAfterShortTimeout('vlog');
                 return;
             case 5:
-                setTimeout(() => {$("p.hint").fadeIn();}, 120000);
+                ShowHint(6, 120);
                 return;
             case 6:
                 document.getElementById('facultyBG').play();
+                ShowHint(7, 180);
                 return;  
             case 7:
                 document.getElementById('facultyBG').pause();
                 PlayAfterShortTimeout('ending');
                 return;        
         }
+    }
+
+    function ShowHint(pageIndex, delayInSeconds) {
+        let $hint = $GetPage(pageIndex).find(".hint");
+        setTimeout(() => {
+            $hint.fadeIn();
+        }, delayInSeconds * 1000);
     }
 })();
 
