@@ -46,7 +46,7 @@
         });
     }
 
-    const ANS = ["ProSS", "skull", undefined, undefined, "Project Super Human", undefined, "Faculty Club", "61343"];
+    const ANS = ["ProSS", "skull", undefined, "Project Super Human", undefined, "Faculty Club", "61343"];
     function ValidatePage(pageIndex) {
         let value = ANS[pageIndex - 1] ;
         if(typeof value === "undefined")
@@ -70,14 +70,14 @@
             case 3:
                 document.getElementById('chem').pause();
                 return;    
-            case 5:
+            case 4:
                 document.getElementById('phoneCall').pause();  
                 document.getElementById('vlog').play();
                 return;
-            case 7:
+            case 6:
                 document.getElementById('facultyBG').play();
                 return;  
-            case 8:
+            case 7:
                 document.getElementById('facultyBG').pause();
                 document.getElementById('ending').play();
                 return;        
