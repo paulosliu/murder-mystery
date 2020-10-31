@@ -84,7 +84,7 @@
                 PlayAfterShortTimeout('vlog');
                 return;
             case 6:
-                ShowHint(7, 120);
+                ShowHint(7, 240);
                 return;
             case 7:
                 document.getElementById('facultyBG').play();
