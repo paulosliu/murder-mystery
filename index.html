@@ -20,7 +20,7 @@
                 <h1>Murder Mystery</h1>
             </div>
             <div class="center title-button-container">
-                <button class="creepy-button start-button" onclick="PlayWithShortTimeout('intro');">Start</button>
+                <button class="creepy-button start-button" onclick="PlayAfterShortTimeout('intro');">Start</button>
             </div>
         </div>
         <div id="game" style="display: none;">
@@ -80,13 +80,27 @@
                 </div>
             </div>
             <div class="page" page-index="5">
+                <audio id="youtube" loop>
+                    <source src="assets/youtube.mp3" type="audio/mp3">
+                </audio>
+                <div style="min-height: 16em">&nbsp;</div>
+                <div class="input-container">
+                    <input type="text">
+                </div>
+                <div style="min-height: 16em">&nbsp;</div>
+                <div class="button-container">
+                    <button class="creepy-button nav-button prev-page-button" onclick="document.getElementById('youtube').pause()">Previous</button>
+                    <button class="creepy-button nav-button next-page-button">Next</button>
+                </div>
+            </div>
+            <div class="page" page-index="6">
                 <video id="vlog" src="assets/Prof Vlog.mov" controls></video>
                 <div class="button-container">
                     <button class="creepy-button nav-button prev-page-button" onclick="document.getElementById('vlog').pause()">Previous</button>
                     <button class="creepy-button nav-button next-page-button" onclick="document.getElementById('vlog').pause()">Next</button>
                 </div>
             </div>
-            <div class="page" page-index="6">
+            <div class="page" page-index="7">
                 <div class="center">
                     <img src="assets/Sudoku.JPG" alt="Sudoku">
                 </div>
@@ -100,7 +114,7 @@
                     <button class="creepy-button nav-button next-page-button">Next</button>
                 </div>
             </div>
-            <div class="page" page-index="7">
+            <div class="page" page-index="8">
                 <div class="center">
                     <img src="assets/Faculty Background Pic.jpg" alt="Faculty Building">
                 </div>
@@ -117,7 +131,7 @@
                     <button class="creepy-button nav-button next-page-button">Next</button>
                 </div>
             </div>
-            <div class="page" page-index="8">
+            <div class="page" page-index="9">
                 <div class="center">
                     <video id="ending" src="assets/Murder Mystery 2020 Ending.mov" controls></video>
                 </div>

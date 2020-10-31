@@ -50,7 +50,7 @@
         });
     }
 
-    const ANS = ["Professor Adams Morris", "skull", undefined, "Project Super Human", undefined, "Faculty Club", "61343"];
+    const ANS = ["Professor Adams Morris", "skull", undefined, "8587548819", "Project Super Human", undefined, "Faculty Club", "61343"];
     function ValidatePage(pageIndex) {
         let value = ANS[pageIndex - 1] ;
         if(typeof value === "undefined")
@@ -76,16 +76,20 @@
                 return;    
             case 4:
                 document.getElementById('phoneCall').pause();
+                PlayAfterShortTimeout('youtube');
+                return;  
+            case 5:
+                document.getElementById('youtube').pause();
                 PlayAfterShortTimeout('vlog');
                 return;
-            case 5:
-                ShowHint(6, 120);
-                return;
             case 6:
-                document.getElementById('facultyBG').play();
-                ShowHint(7, 180);
-                return;  
+                ShowHint(7, 120);
+                return;
             case 7:
+                document.getElementById('facultyBG').play();
+                ShowHint(8, 180);
+                return;  
+            case 8:
                 document.getElementById('facultyBG').pause();
                 PlayAfterShortTimeout('ending');
                 return;        
