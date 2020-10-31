@@ -46,7 +46,7 @@
         });
     }
 
-    const ANS = ["ProSS", "skull", undefined, "Project Super Human", undefined, "Faculty Club", "61343"];
+    const ANS = ["Professor Adams Morris", "skull", undefined, "Project Super Human", undefined, "Faculty Club", "61343"];
     function ValidatePage(pageIndex) {
         let value = ANS[pageIndex - 1] ;
         if(typeof value === "undefined")
